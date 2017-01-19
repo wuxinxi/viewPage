@@ -34,10 +34,10 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     @InjectView(R.id.activity_main)
     RelativeLayout activityMain;
 
-    private String[] imageUrl = {"http://img6.17ugo.com/images/jjbh/dsyzjkwxxcq/dsyzjkwxxcq_45.jpg",
-            "http://www.0516tx.com/files/2013-9/20130923124514134077.jpg",
-            "http://www.0516tx.com/files/2013-9/20130923124431105169.jpg",
-            "http://www.0516tx.com/files/2013-9/20130923124452120289.jpg"};
+    private String[] imageUrl = {"http://imgsrc.baidu.com/forum/pic/item/1b4c510fd9f9d72ad17dbb82d42a2834349bbb10.jpg",
+            "http://img1.ph.126.net/uGXCiObZfCXqWxelYpQI-g==/6597955973028472771.jpg",
+            "http://www.3dmgame.com/UploadFiles/201201/20120122133555245.jpg",
+            "http://upload4.hlgnet.com/bbsupfile/2010/2010-12-26/20101226151451_39.jpg"};
     private List<ImageView> imageList;
     private LinearLayout dot_group;//小圆点
     private String[] imageDescArrs;
@@ -89,11 +89,12 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
     }
 
     private void initViewPagerData() {
-        imageDescArrs = new String[]{"标题1", "标题2", "标题3", "标题4", "标题5"};
+        imageDescArrs = new String[]{"放飞梦想", "天空尽头是怎么的一种美", "大自然的风格", "猛虎下山"};
         imageList = new ArrayList<ImageView>();
+
         ImageView im;
         View dotView;
-        for (int i = 0; i < imageDescArrs.length; i++) {
+        for (int i = 0; i < imageUrl.length; i++) {
             im = new ImageView(this);
             Glide.with(this).load(imageUrl[i])
                     .crossFade()
